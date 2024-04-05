@@ -44,6 +44,10 @@ function addCity() {
 // generate table 
 function generateTable() {
     let tableNumber = document.getElementById("inputField").value;
+    if(!tableNumber){
+        alert("please enter some value in input field")
+        return
+    }
     documents.innerHTML = `<h3>Table of ${tableNumber}<h3/> <hr />`
     for (let i = 1; i < 11; i++) {
         let table = tableNumber + " * " + i + " = " + tableNumber * i + "<br />"
